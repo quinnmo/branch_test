@@ -43,14 +43,5 @@ view: order_items {
     drill_fields: [id, inventory_items.id, orders.id]
   }
 
-  measure: in_query_test {
-    type: count
-    sql:{% if products._in_query %}
-           ${products.id}
-        {% elsif users._in_query %}
-           ${users.id}
-        {% else %}
-            ${orders.id}
-        {% endif %} ;;
-  }
+
 }

@@ -51,3 +51,5 @@ explore: inventory_star {
     sql_on: ${products.id} = ${inventory_star.p_id} ;;
   }
 }
+
+#test
