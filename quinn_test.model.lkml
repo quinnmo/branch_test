@@ -37,7 +37,16 @@ explore: orders {
 
 explore: products {}
 
-explore: users {}
+explore: users {
+  join: dimensionalized_measure {
+    relationship: one_to_one
+    sql_on: ${users.state} = ${dimensionalized_measure.users_state} ;;
+  }
+  join: orders {
+    relationship: one_to_many
+    sql_on: ${orders.user_id} = ${users.id}  ;;
+  }
+}
 
 explore: native_dt {}
 
@@ -51,5 +60,9 @@ explore: inventory_star {
     sql_on: ${products.id} = ${inventory_star.p_id} ;;
   }
 }
+
+explore: users_2 {}
+
+
 
 #test
