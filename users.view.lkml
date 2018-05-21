@@ -277,6 +277,12 @@ measure: sum_age {
   sql: ${age} ;;
 }
 
+
+measure: list {
+  type: list
+  list_field: city
+}
+
 # measure: yesno_filter{
 #   type: yesno
 #   sql: ${count}/${count_2} < 0.20;;

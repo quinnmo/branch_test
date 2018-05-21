@@ -48,7 +48,7 @@ explore: users {
   }
 }
 
-explore: native_dt {}
+# explore: native_dt {}
 
 explore: inventory_star {
   join: order_items {
